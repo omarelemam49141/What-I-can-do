@@ -2,7 +2,7 @@
 - https://omarelemam49141.github.io/What-I-can-do/Filtering%20%26%20Text%20Effect
 - https://omarelemam49141.github.io/What-I-can-do/Full%20Page%20Menu%20%26%20TyprWriter%20Effect
 - https://omarelemam49141.github.io/What-I-can-do/Get%20Github%20Repositories
-- https://omarelemam49141.github.io/What-I-can-do/tree/main/Image%20Slider
+- https://omarelemam49141.github.io/What-I-can-do/Image%20Slider
 - https://omarelemam49141.github.io/What-I-can-do/Mix%20Blend%20Loading%20%26%20input%20Letters%20Counting
 - https://omarelemam49141.github.io/What-I-can-do/Mix%20Blend%20Loading%20%26%20input%20Letters%20Counting
 - https://omarelemam49141.github.io/What-I-can-do/Page%20Scroll%20Progress%20%26%20Multiple%20Loader
