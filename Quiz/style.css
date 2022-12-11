@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* start container */
+.container {
+    margin: 50px auto;
+    width: 800px;
+    position: relative;
+    padding: 20px;
+    background-color: #cecece;
+}
+
+.header {
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.header .category {
+    flex: 1;
+}
+
+.header .count {
+    flex: 1;
+    text-align: right;
+}
+
+.question {
+    font-size: 22px;
+    padding: 20px;
+    padding-bottom: 0;
+    font-weight: bold;
+    background-color: white;
+}
+
+.options {
+    background-color: white;
+    padding: 20px;
+}
+
+.options .answer {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.options .answer:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.options .answer input[type="radio"] {
+    margin-right: 10px;
+}
+
+.options .answer input[type="radio"]:checked + label {
+    color: #0075ff;
+}
+
+input[type="submit"] {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    background-color: #0075ff;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: white;
+    margin-top: 15px;
+    padding: 10px;
+    display: flex;
+}
+
+.footer .bullets {
+    flex: 1;
+    color: #444;
+}
+
+.footer .bullets .spans {
+    margin-bottom: 10px;
+}
+
+.footer .bullets .spans span.on {
+    background-color: #0075ff;
+}
+
+.footer .bullets .spans span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: #d0d0d0;
+}
+
+.footer .timer {
+    flex: 1;
+    text-align: right;
+}
+
+.result {
+    font-weight: bold;
+}
+
+.result .good {
+    color: green;
+}
+
+.result .bad {
+    color: red;
+}
+
+.result .perfect {
+    color: #0075ff;
+}

@@ -1,0 +1,320 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --hanger-width: 4px;
+    --hanger-color: #444;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 5000px;
+    font-family: sans-serif;
+}
+
+/* start container */
+.container {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+/* start header */
+.container .header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container .header .title{
+    flex: 1;
+}
+
+.container .header .category{
+    flex: 1;
+    text-align: right;
+}
+
+.container .header .category p span {
+    color: red;
+}
+/* end header */
+
+.container hr {
+    border: 2px solid #eee;
+    margin-top: 20px;
+}
+
+/* start hanger */
+.container .hanger {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 50px;
+    height: 350px;
+}
+
+.container .hanger .row {
+    flex-basis: 50%;
+    position: relative;
+    height: 100%;
+}
+
+.container .hanger .stand {
+    position: absolute;
+    border-bottom: var(--hanger-width) solid var(--hanger-color);
+    width: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.container .hanger .stand::before {
+    content: "";
+    display: none;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: var(--hanger-width);
+    background-color: var(--hanger-color);
+    transform: translateX(-50%);
+}
+
+.container .hanger .stand::after {
+    content: "";
+    display: none;
+    height: 4px;
+    width: 100px;
+    top: -230px;
+    left: 50%;
+    position: absolute;
+    background-color: var(--hanger-color);
+}
+
+.container .hanger .rope {
+    width: var(--hanger-width);
+    height: 30px;
+    position: absolute;
+    background-color: var(--hanger-color);
+    top: 17px;
+    left: 322px;
+    display: none;
+}
+
+.container .hanger .rope::after {
+    content: "";
+    display: none;
+    width: 70px;
+    height: 70px;
+    border: var(--hanger-width) dashed var(--hanger-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 29px;
+    left: -35px;
+}
+
+.container .hanger .hangman {
+    position: absolute;
+    left: 50%;
+    top: 72px;
+}
+
+.container .hanger .hangman .head {
+    width: 50px;
+    height: 50px;
+    border: var(--hanger-width) solid var(--hanger-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    left: 75px;
+    display: none;
+}
+
+.container .hanger .hangman .body {
+    width: var(--hanger-width);
+    height: 85px;
+    position: absolute;
+    top: 34px;
+    left: 98px;
+    background-color: var(--hanger-color);
+    display: none;
+}
+
+.container .hanger .hangman .hands {
+    display: none;
+}
+
+.container .hanger .hangman .hands::before,
+.container .hanger .hangman .hands::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    position: absolute;
+    background-color: var(--hanger-color);
+    top: 70px;
+}
+
+.container .hanger .hangman .hands::before {
+    left: 97px;
+    transform: rotate(30deg);
+}
+
+.container .hanger .hangman .hands::after {
+    left: 52px;
+    transform: rotate(-30deg);
+}
+
+.container .hanger .hangman .legs {
+    display: none;
+}
+
+.container .hanger .hangman .legs::before,
+.container .hanger .hangman .legs::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    position: absolute;
+    background-color: var(--hanger-color);
+    top: 129px;
+}
+
+.container .hanger .hangman .legs::before {
+    left: 97px;
+    transform: rotate(30deg);
+}
+
+.container .hanger .hangman .legs::after {
+    left: 52px;
+    transform: rotate(-30deg);
+}
+
+/* start wrong classes */
+.hanger.wrong-1 .stand::before {
+    display: block;
+}
+
+.hanger.wrong-2 .stand::after {
+    display: block;
+}
+
+.hanger.wrong-3 .rope {
+    display: block;
+}
+
+.hanger.wrong-4 .rope::after {
+    display: block;
+}
+
+.hanger.wrong-5 .hangman .head {
+    display: block;
+}
+
+.hanger.wrong-6 .hangman .body {
+    display: block;
+}
+
+.hanger.wrong-7 .hangman .hands {
+    display: block;
+}
+
+.hanger.wrong-8 .hangman .legs {
+    display: block;
+}
+/* end wrong classes */
+
+.container .hanger .letters {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.container .hanger .letters span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #2d959b;
+    margin: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container .hanger .letters span.clicked {
+    pointer-events: none;
+    background-color: var(--hanger-color);
+    opacity: 0.2;
+}
+/* end hanger */
+
+/* start letters-guess */
+.container .letters-guess {
+    background-color: rgb(214, 213, 213);
+    padding: 10px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .letters-guess span {
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 26px;
+    background-color: #eee;
+    border-bottom: var(--hanger-width) solid var(--hanger-color);
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--hanger-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .letters-guess span.space {
+    content: " ";
+    background-color: var(--hanger-color);
+    border: none;
+    width: 20px;
+    height: var(--hanger-width);
+}
+/* end letters-guess */
+
+/* start endgame */
+.end-game {
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2d959b;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.end-game span {
+    color: green;
+    font-weight: bold;
+}
+/* end endgame */
+/* end container */
+

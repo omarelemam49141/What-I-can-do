@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Page Scroll Progress</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Hangman</div>
+            <div class="category">
+                <p>Word From: <span></span></p>
+            </div>
+        </div>
+        <hr>
+        <div class="hanger">
+            <div class="row">
+                <div class="stand"></div>
+                <div class="rope"></div>
+                <div class="hangman">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                    <div class="hands"></div>
+                    <div class="legs"></div>
+                </div>
+            </div>
+
+            <div class="letters"></div>
+        </div>
+
+        <div class="letters-guess"></div>
+        <hr>
+    </div>
+
+    <audio src="wrong.mp3" id="wrong"></audio>
+    <audio src="right.mp3" id="success"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* start container */
+.container {
+    margin: 50px auto;
+    width: 800px;
+    position: relative;
+    padding: 20px;
+}
+
+.form {
+    background-color: #ddd;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+    border-radius: 7px;
+}
+
+.form input {
+    font-size: 20px;
+    padding: 15px;
+    flex-basis: 80%;
+    border: none;
+    color: #444;
+    caret-color: #2d932d;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form button.add-task {
+    font-size: 20px;
+    padding: 15px;
+    flex-basis: 18%;
+    cursor: pointer;
+    background-color: #2d932d;
+    color: white;
+    border: none;
+}
+
+.form button.add-task:hover {
+    background-color: #3ab53a;
+}
+
+.tasks {
+    background-color: #ddd;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.tasks .task {
+    background-color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.tasks .task:hover {
+    background-color: #ccc;
+}
+
+.tasks .task.done {
+    background-color: #ccc;
+}
+
+.tasks .task:first-of-type {
+    margin-top: 0;
+}
+
+.tasks .task p {
+    font-size: 18px;
+    flex-basis: 700px;
+}
+
+.tasks .task button.delete {
+    background-color: #d41010;
+    padding: 10px 15px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tasks .task button.delete:hover {
+    background-color:#d32020; 
+}

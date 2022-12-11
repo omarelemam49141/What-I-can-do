@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* start container */
+.container {
+    margin: 50px auto;
+    width: 800px;
+    position: relative;
+    padding: 20px;
+}
+
+.repo {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #eee;
+}
+
+.repo input {
+    flex-basis: 550px;
+    height: 53px;
+    color: #222;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+}
+
+.repo input:focus {
+    outline: 3px solid rgb(241 105 60);
+}
+
+.repo span.btn {
+    display: block;
+    width: 100px;
+    height: 53px;
+    line-height: 53px;
+    border-radius: 5px;
+    background-color: rgb(241 105 60);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.result {
+    padding: 20px;
+    background-color: #d6d6d6;
+    display: none;
+}
+
+.result .repoInfo {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.result .repoInfo h3 {
+    flex-basis: 70%;
+}
+
+.result .repoInfo span,
+.result .repoInfo a {
+    flex: 1;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.result .repoInfo span {
+    background-color: #a73f4d;
+}
+
+.result .repoInfo a {
+    background-color: rgb(59 172 107);
+    text-decoration: none;
+}
+
+
